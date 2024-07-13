@@ -1,0 +1,43 @@
+<div class="content">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="pokedex-form">
+    <div class="pokedex-header">
+      <div class="pokedex-light"></div>
+      <div class="pokedex-light small-light"></div>
+    </div>
+    <mat-form-field appearance="outline" class="pokedex-field">
+      <mat-label>Enter a Pokémon</mat-label>
+      <input matInput placeholder="Pokémon" formControlName="name" type="text">
+    </mat-form-field>
+    <button type="submit" class="pokedex-button">Search</button>
+  </form>
+  <div *ngIf="showImage">
+    <div class="pokedex-card" [ngStyle]="{'--primary-color': getTypeColor(data.types?.[0].type.name)}">
+      <div class="header">
+        <span>HP {{ data.stats[0].base_stat }}</span>
+      </div>
+      <img class="pokemonImage" [src]="data.sprites.front_default" alt="Photo">
+      <div class="lower-card">
+        <div class="pokemon-details">
+          <h2>{{ data.name }}</h2>
+          <ng-container *ngFor="let type of data.types">
+            <p class="type" [ngStyle]="{'--type-color': getTypeColor(type.type.name)}">{{ type.type.name }}</p>
+          </ng-container>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <p>Ataque</p>
+            <p>{{ data.stats[1].base_stat }}</p>
+          </div>
+          <div class="stat">
+            <p>Defensa</p>
+            <p>{{ data.stats[2].base_stat }}</p>
+          </div>
+          <div class="stat">
+            <p>Velocidad</p>
+            <p>{{ data.stats[5].base_stat }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

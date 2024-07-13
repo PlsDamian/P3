@@ -1,0 +1,128 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokedex-form {
+  background-color: #ff0000;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.pokedex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.pokedex-light {
+  width: 20px;
+  height: 20px;
+  background-color: #00ff00;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.small-light {
+  width: 10px;
+  height: 10px;
+  background-color: #00ff00;
+  margin-left: 10px;
+}
+
+.pokedex-field {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 5px;
+}
+
+.mat-form-field-wrapper {
+  padding: 0 10px;
+}
+
+.pokedex-button {
+  background-color: #0000ff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.pokedex-button:hover {
+  background-color: #00008b;
+}
+
+.pokedex-card {
+  border-radius: 15px;
+  width: 250px;
+  text-align: center;
+  padding: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: radial-gradient(circle at 50% 0%, var(--primary-color) 50%, #ffffff 50%);
+}
+
+.pokemon-details .type {
+  border-radius: 50px;
+  border: 1px solid black;
+  padding: 5px 10px;
+  display: inline-block;
+  margin-top: 5px;
+  background-color: var(--type-color);
+  margin-right: 5px;
+  color: #ffffff;
+}
+
+.header {
+  background-color: white;
+  border-radius: 50px;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  top: -30px;
+}
+
+.header span {
+  font-weight: bold;
+}
+
+.pokemonImage {
+  width: 150px;
+  height: auto;
+  margin-top: -20px;
+}
+
+.pokemon-details {
+  margin-top: 50px;
+}
+
+.pokemon-details h2 {
+  text-transform: capitalize;
+}
+
+.type {
+  border-radius: 50px;
+  border: 1px solid black;
+  padding: 5px 10px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.stat {
+  text-align: center;
+}
